@@ -1,6 +1,10 @@
 import Bouton from './Bouton'
+import { useFiltres } from '../context/FiltresContext'
 
 function Produit({ nom, prix, image, tags }) {
+
+  const { setTag } = useFiltres()
+
   return (
     <div className="col-md-6 col-lg-4 mb-4">
       <div className="produit border h-100 d-flex flex-column">
@@ -12,7 +16,12 @@ function Produit({ nom, prix, image, tags }) {
           </div>
           <div className="mb-3">
             {tags.map((tag) => (
-              <Bouton texte={tag} classe="btn btn-sm btn-outline-dark me-2 mb-2" key={tag} />
+              <Bouton
+                texte={tag}
+                classe="btn btn-sm btn-outline-dark me-2 mb-2"
+                onClick={() => setTag(tag)}
+                key={tag}
+              />
             ))}
           </div>
           <div className="mt-auto">

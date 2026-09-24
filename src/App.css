@@ -34,3 +34,7 @@
   background-size: cover;
   background-position: center;
 }
+
+.list-group-item {
+  cursor: pointer;
+}
