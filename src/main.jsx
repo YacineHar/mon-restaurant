@@ -5,11 +5,14 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
 import App from './App.jsx'
 import { FiltresProvider } from './context/FiltresContext.jsx'
+import { PanierProvider } from './context/PanierContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <FiltresProvider>
-      <App />
+      <PanierProvider>
+        <App />
+      </PanierProvider>
     </FiltresProvider>
   </StrictMode>,
 )

@@ -51,13 +51,7 @@ function App() {
 
             <div className="row">
               {resultats.map((produit) => (
-                <Produit
-                  key={produit.id}
-                  nom={produit.nom}
-                  prix={produit.prix}
-                  image={produit.image}
-                  tags={produit.tags}
-                />
+                <Produit key={produit.id} produit={produit} />
               ))}
             </div>
           </div>

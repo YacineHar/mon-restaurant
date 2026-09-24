@@ -4,7 +4,7 @@ import Panier from './Panier'
 function Header() {
   return (
     <header className="header" style={{ backgroundImage: `url(${bgHeader})` }}>
-      <Panier nombre={0} />
+      <Panier />
       <h1 className="titre">Mon Restaurant</h1>
     </header>
   )
